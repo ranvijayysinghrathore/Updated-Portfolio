@@ -23,7 +23,7 @@
 
 
 .work__container{
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(3, max-content);
     gap: 3rem;
     justify-content: center;
 }
@@ -74,6 +74,13 @@
 .active-work{
     background-color: var(--title-color);
     color: var(--container-color);
+}
+
+
+@media screen and (max-width: 1147px){
+    .work__container{
+        grid-template-columns: repeat(2, max-content);
+    }
 }
 
 

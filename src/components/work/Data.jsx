@@ -10,6 +10,7 @@ import Work8 from "../../assets/Work8.png"
 import Work9 from "../../assets/Work9.jpeg"
 import Work10 from "../../assets/Work10.png"
 import Work11 from "../../assets/Work11.png"
+import Work12 from "../../assets/Work12.png"
 
 
 export const projectsData = [
@@ -38,6 +39,14 @@ export const projectsData = [
     title: "Future Note",
     category: "web",
     link:"https://futurenote4u.vercel.app/"
+  },
+
+   {
+    id: 12,
+    image: Work12,
+    title: "Motia Backend Forge",
+    category: "web",
+    link:"https://motia-backend-forge.vercel.app"
   },
 
 
