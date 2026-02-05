@@ -11,6 +11,7 @@ import Work9 from "../../assets/Work9.jpeg"
 import Work10 from "../../assets/Work10.png"
 import Work11 from "../../assets/Work11.png"
 import Work12 from "../../assets/Work12.png"
+import Work13 from "../../assets/Work13.png"
 
 
 export const projectsData = [
@@ -22,6 +23,16 @@ export const projectsData = [
     category: "web",
     link:"https://resumeislive.vercel.app/"
   },
+
+  
+    {
+    id: 13,
+    image: Work13,
+    title: "EnvSend",
+    category: "web",
+    link:"https://envsend.vercel.app/"
+  },
+
 
 
     {
