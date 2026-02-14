@@ -1,58 +1,125 @@
-#transring{
-    height: 50vh;
-    width: 50vw;
-    position: fixed;
-    top: 13rem;
-    left: 43rem;
+#svg-container {
+    position: absolute;
+    top: 74%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 350px;
+    height: auto;
+    pointer-events: none;
 }
 
-.svg-text{
+@media screen and (max-width: 1212px) {
+    #svg-container {
+        top: 80%;
+    }
+}
+
+#transring {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: auto;
+    overflow: visible;
+}
+
+.svg-text {
     cursor: pointer;
     color: var(--text-color);
-    font-weight:100;
+    font-weight: 100;
     font-family: var(--body-font);
 }
-.svg-text:hover{
+
+.svg-text:hover {
     font-size: 1.2rem;
-    transition: .3s ease-in-out ;
-}   
-#svgline{
+    transition: .3s ease-in-out;
+}
+
+/* Svgline - Fixed positioning reserved for other pages */
+#svgline {
     height: 70vh;
     width: 20vw;
     position: fixed;
     top: 13rem;
     right: -3rem;
-}
-@media screen and (max-width: 1269px) {
-    #transring{
-        left: 38rem;
-        top: 10rem;
-    }
+    z-index: -1;
 }
 
-@media screen and (max-width: 1151px) {
-    #transring{
-        left: 36rem;
-        top: 10rem;
-    }
-}
+/* Svgline Specifics */
 @media screen and (max-width: 1269px) {
-    #svgline{
+    #svgline {
         left: 0rem;
         top: 15rem;
     }
 }
 
 @media screen and (max-width: 1145px) {
-    #svgline{
-        display: none;
-    }
-}
-@media screen and (max-width: 1025px) {
-    #svg-container{
+    #svgline {
         display: none;
     }
 }
 
+/* Svg Ring Responsiveness */
+@media screen and (max-width: 1200px) {
+    #svg-container {
+        width: 300px;
+        right: 10px;
+    }
+}
 
+@media screen and (max-width: 992px) {
+    #svg-container {
+        width: 280px;
+        right: 0;
+    }
+}
 
+/* Mobile Layout - Top Right Corner */
+@media screen and (max-width: 768px) {
+    #svg-container {
+        position: absolute;
+        top: 0px;
+        right: 200px;
+        bottom: auto;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        width: 240px;
+    }
+
+    .svg-text {
+        font-size: 12px;
+        transform: rotate(90deg);
+        transform-box: fill-box;
+        transform-origin: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #svg-container {
+        width: 290px;
+        right: 30px;
+        top: 7px;
+    }
+
+    /* Services - Shift Right */
+    #Dots3 .svg-text {
+        transform: translate(0px, 15px) rotate(90deg);
+    }
+
+     #Dots1 .svg-text {
+        transform: translate(-10px, 5px) rotate(90deg);
+    }
+
+    /* Qualifications - Shift Top */
+    #Dots4 .svg-text {
+        transform: translate(25px, 0px) rotate(90deg);
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #svg-container {
+        width: 260px;
+        right: 5px;
+        top: 25px;
+    }
+}

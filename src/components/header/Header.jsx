@@ -91,15 +91,16 @@ const [darkMode, setDarkMode] = useState(false);
               </NavLink>
             </li>
            
-              <button onClick={toggleDarkMode} className="dark-toggle-btn">
-        {darkMode ? "☀" : "🌙"}
-      </button>
+
             
             
 
           </ul>
           <i className='uil uil-times nav__close' onClick={()=> showMenu(!Toggle)}></i>
         </div>
+        <button onClick={toggleDarkMode} className="dark-toggle-btn">
+          {darkMode ? "☀" : "🌙"}
+        </button>
         <div className="nav__toggle" onClick={()=> showMenu(!Toggle)}>
           <i className="uil uil-apps"></i>
         </div>

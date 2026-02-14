@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 
 const Data = () => {
@@ -57,7 +57,7 @@ const Data = () => {
                   ></path>
                 </svg>
         </h1>
-        <h3 className="home__subtitle">Full-Stack Developer</h3>
+        <h3 className="home__subtitle">Developer</h3>
         <p className="home__description">
             I'm a full-stack developer with a passion for creating beautiful websites and dedicated to my work.
         </p>
@@ -81,6 +81,29 @@ const Data = () => {
                   ></path>
                 </svg>
         </NavLink>
+
+        <Link to="/work" className="home__cli">
+            <div className="cli__header">
+                <div className="cli__dots">
+                    <span className="cli__dot cli__dot--red"></span>
+                    <span className="cli__dot cli__dot--yellow"></span>
+                    <span className="cli__dot cli__dot--green"></span>
+                </div>
+                <span className="cli__title">root@portfolio</span>
+            </div>
+            <div className="cli__body">
+                <div className="cli__line">
+                    <span className="cli__prompt">root@server:~$</span> <span className="cli__cmd">init_portfolio.sh</span>
+                </div>
+                <div className="cli__line cli__output">
+                    <span className="cli__success">[OK] Loading assets...</span>
+                    <span className="cli__success">[OK] Connecting modules...</span>
+                </div>
+                 <div className="cli__line">
+                    <span className="cli__prompt">root@server:~$</span> <span className="cli__blink">Tap to Enter_</span>
+                </div>
+            </div>
+        </Link>
     </div>
   )
 }
