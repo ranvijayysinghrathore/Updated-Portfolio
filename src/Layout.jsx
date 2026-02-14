@@ -1,10 +1,10 @@
-import React from 'react'
+// import React from 'react'
 import Header from './components/header/Header'
-import Footer from './components/footer/Footer';
+// import Footer from './components/footer/Footer';
 import { Outlet } from 'react-router-dom'
-import About from './components/about/About';
-import InfoSection from './InfoSection';
-import { useEffect, useState } from "react";
+// import About from './components/about/About'; 
+// import InfoSection from './InfoSection';
+// import { useEffect, useState } from "react";
 import CursorEffect from './components/cursor/CursorEffect';
 import { Analytics } from "@vercel/analytics/react"
 
