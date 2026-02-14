@@ -1,7 +1,7 @@
 import React , { useState } from 'react';
 import "./header.css";
-import { Link, NavLink } from 'react-router-dom';
-import ToggleSwitch from '../ToogleSwitch/ToggleSwitch';
+import { NavLink } from 'react-router-dom';
+// import ToggleSwitch from '../ToogleSwitch/ToggleSwitch';
 import { useEffect } from 'react';
 
 

@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const Info = () => {
   const [count, setCount] = useState(20); 
   const target = 20; 
   const [hasStarted, setHasStarted] = useState(false); 
 
-  const startCounting = () => {
+  const startCounting = useCallback(() => {
     if (count < target) {
       setCount((prevCount) => prevCount + 1);
     }
-  };
+  }, [count, target]);
 
   useEffect(() => {
     let interval;
@@ -19,22 +19,24 @@ const Info = () => {
       }, 50); 
     }
     return () => clearInterval(interval); 
-  }, [hasStarted, count]);
+  }, [hasStarted, count, startCounting]);
 
-  const checkIfInView = () => {
+  const checkIfInView = useCallback(() => {
     const section = document.getElementById('completed-projects');
-    const rect = section.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0 && !hasStarted) {
-      setHasStarted(true); 
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0 && !hasStarted) {
+        setHasStarted(true); 
+      }
     }
-  };
+  }, [hasStarted]);
 
   useEffect(() => {
     window.addEventListener('scroll', checkIfInView);
     return () => {
       window.removeEventListener('scroll', checkIfInView);
     };
-  }, [hasStarted]);
+  }, [checkIfInView]);
 
   return (
     <div className="about__info grid">
